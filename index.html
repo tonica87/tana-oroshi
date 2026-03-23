@@ -905,9 +905,7 @@
       current.id = sid;
       if (sheet) current.sheet = sheet;
       localStorage.setItem('sheets_config', JSON.stringify(current));
-      // パラメータを消してクリーンなURLにリダイレクト
-      const clean = window.location.pathname;
-      window.history.replaceState({}, '', clean);
+      // URLはそのまま維持（ホーム画面追加のため書き換えない）
     }
   })();
 
