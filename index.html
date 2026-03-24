@@ -1312,7 +1312,6 @@
 
   // ── 自動同期 ──────────────────────────────────────
   async function autoSync() {
-    // サインインしていなければ何もしない
     if (!gAccessToken) return;
     const config = JSON.parse(localStorage.getItem('sheets_config') || '{}');
     if (!config.id) return;
@@ -1340,16 +1339,13 @@
         }
       );
       if (res.status === 401) {
-        // トークン期限切れ → サイレントに再取得を試みる
         gAccessToken = null;
         silentTokenRefresh();
       } else if (!res.ok) {
-        // その他のエラーは小さく通知するだけ
         showToast('⚠️ 自動同期に失敗しました', 'var(--danger)');
       }
-      // 成功時は何も表示しない
     } catch(e) {
-      // ネットワークエラーは無視（オフライン時など）
+      // ネットワークエラーは無視
     }
   }
 
@@ -1437,6 +1433,61 @@
     btn.textContent = '同期中…';
 
     try {
+      // ── STEP 1: Sheetsからデータを読み込む ──────────
+      const getRes = await fetch(
+        `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(sheet + '!A:F')}`,
+        { headers: { 'Authorization': 'Bearer ' + gAccessToken } }
+      );
+
+      if (!getRes.ok) {
+        const err = await getRes.json();
+        handleSheetsError(getRes.status, err.error?.message || '', btn);
+        return;
+      }
+
+      const data = await getRes.json();
+      const rows = (data.values || []).slice(1); // ヘッダー行を除く
+
+      // ── STEP 2: SheetsのデータをメモIDで管理 ──────────
+      // Sheetsの行からメモを復元（B列=テキスト、C列=タグ、D列=ファボ、A列=日時をIDとして使用）
+      const sheetMemos = rows
+        .filter(r => r[1]) // テキストがある行のみ
+        .map(r => {
+          // 日時文字列からタイムスタンプを生成してIDとして使う
+          const dateStr = r[0] || '';
+          const text = r[1] || '';
+          const tags = r[2] ? r[2].split(' ').filter(Boolean) : [];
+          const fav = r[3] === '★';
+          const commentTexts = r[5] ? r[5].split(' | ').filter(Boolean) : [];
+          // IDを日時＋テキストのハッシュで生成（既存IDと照合するため）
+          const existing = memos.find(m =>
+            m.text === text &&
+            fmtDate(m.createdAt) === dateStr
+          );
+          return existing || {
+            id: Date.now() + Math.random(), // 新規メモ
+            text,
+            tags,
+            fav,
+            comments: commentTexts.map(t => ({ id: Date.now() + Math.random(), text: t })),
+            createdAt: new Date().toISOString()
+          };
+        });
+
+      // ── STEP 3: マージ（localStorageを優先、Sheetsにしかないメモを追加）──
+      const localIds = new Set(memos.map(m => m.text + fmtDate(m.createdAt)));
+      const newFromSheets = sheetMemos.filter(m => !localIds.has(m.text + fmtDate(m.createdAt)));
+
+      if (newFromSheets.length > 0) {
+        memos = [...memos, ...newFromSheets].sort((a, b) =>
+          new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        save();
+        renderFeed();
+        renderTagFilters();
+      }
+
+      // ── STEP 4: 全件をSheetsに書き出す ──────────────
       const values = [
         ['日時', 'テキスト', 'タグ', 'ファボ', 'コメント数', 'コメント内容'],
         ...memos.map(m => [
@@ -1449,45 +1500,28 @@
         ])
       ];
 
-      const res = await fetch(
+      const putRes = await fetch(
         `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(sheet + '!A1')}?valueInputOption=RAW`,
         {
           method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + gAccessToken
-          },
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + gAccessToken },
           body: JSON.stringify({ range: `${sheet}!A1`, majorDimension: 'ROWS', values })
         }
       );
 
-      if (!res.ok) {
-        const err = await res.json();
-        const code = res.status;
-        const msg = err.error?.message || '';
-
-        if (code === 401) {
-          gAccessToken = null;
-          document.getElementById('authBar').style.display = 'none';
-          showErrorModal('認証が期限切れです', 'Sheetsボタンを押して、もう一度Googleサインインしてください。');
-        } else if (code === 403) {
-          showErrorModal('アクセス権限がありません', `Googleアカウント「${document.getElementById('authName').textContent}」にこのスプレッドシートの編集権限がありません。\n\nスプレッドシートの共有設定でこのアカウントに編集者権限を付与してください。`);
-        } else if (code === 404) {
-          showErrorModal('スプレッドシートが見つかりません', 'スプレッドシートIDが正しいか確認してください。\n\nURLの /d/【ここ】/edit の部分がIDです。');
-        } else if (msg.includes('Unable to parse range')) {
-          const sheetName = msg.match(/Unable to parse range: (.+)!/)?.[1] || sheet;
-          showErrorModal(`シート名「${sheetName}」が見つかりません`, `スプレッドシートを開いて、下のタブに表示されているシート名を確認してください。\n\n現在の設定：「${sheet}」\n\nSheetsボタンからシート名を正しいものに変更して再同期してください。`);
-        } else {
-          showErrorModal('同期エラー', `エラーコード: ${code}\n${msg}`);
-        }
-
-        btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
+      if (!putRes.ok) {
+        const err = await putRes.json();
+        handleSheetsError(putRes.status, err.error?.message || '', btn);
         return;
       }
 
       btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> 同期済`;
       btn.classList.add('synced');
-      showToast(`✅ ${memos.length}件をSheetsに同期しました`, '#34a853');
+      const msg = newFromSheets.length > 0
+        ? `✅ 同期完了（${newFromSheets.length}件をSheetsから取り込みました）`
+        : `✅ ${memos.length}件を同期しました`;
+      showToast(msg, '#34a853');
+
     } catch(e) {
       btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
       if (e.message === 'Failed to fetch') {
@@ -1496,6 +1530,24 @@
         showErrorModal('予期しないエラー', e.message);
       }
     }
+  }
+
+  // エラーハンドリングを共通化
+  function handleSheetsError(code, msg, btn) {
+    if (code === 401) {
+      gAccessToken = null;
+      document.getElementById('authBar').style.display = 'none';
+      showErrorModal('認証が期限切れです', 'Sheetsボタンを押して、もう一度Googleサインインしてください。');
+    } else if (code === 403) {
+      showErrorModal('アクセス権限がありません', `Googleアカウント「${document.getElementById('authName').textContent}」にこのスプレッドシートの編集権限がありません。\n\nスプレッドシートの共有設定でこのアカウントに編集者権限を付与してください。`);
+    } else if (code === 404) {
+      showErrorModal('スプレッドシートが見つかりません', 'スプレッドシートIDが正しいか確認してください。\n\nURLの /d/【ここ】/edit の部分がIDです。');
+    } else if (msg.includes('Unable to parse range')) {
+      showErrorModal(`シート名が見つかりません`, `スプレッドシートを開いて、下のタブに表示されているシート名を確認してください。`);
+    } else {
+      showErrorModal('同期エラー', `エラーコード: ${code}\n${msg}`);
+    }
+    btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
   }
 
   // Sheetsモーダル外クリックで閉じる
