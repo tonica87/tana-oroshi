@@ -5,1573 +5,468 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棚卸しノート</title>
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY0NThlOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhNzhiZmEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImNhcmQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjE4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjA2Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgcng9IjQwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDxyZWN0IHg9IjM1IiB5PSIzOCIgd2lkdGg9IjExMCIgaGVpZ2h0PSIxMDQiIHJ4PSIxMCIgZmlsbD0idXJsKCNjYXJkKSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjYyIiB4Mj0iMTMwIiB5Mj0iNjIiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjciIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNzgiIHgyPSIxMjAiIHkyPSI3OCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNTAiIHkxPSI5NCIgeDI9IjEwOCIgeTI9Ijk0IiBzdHJva2U9IndoaXRlIiBzdHJva2Utb3BhY2l0eT0iMC4zNSIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIxMTUiIGN5PSIxMTgiIHI9IjIyIiBmaWxsPSIjMzRkMzk5Ii8+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTA0LDExOCAxMTIsMTI2IDEyNywxMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="棚卸し">
 <meta name="theme-color" content="#6458e8">
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>棚卸しノート</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
-
-  :root {
-    --bg: #0f0f11;
-    --surface: #18181c;
-    --surface2: #202026;
-    --border: #2a2a32;
-    --accent: #7c6af7;
-    --accent2: #a78bfa;
-    --accent-dim: rgba(124,106,247,0.15);
-    --text: #e8e8f0;
-    --text-muted: #6b6b80;
-    --text-dim: #9898aa;
-    --fav: #f472b6;
-    --tag-bg: rgba(124,106,247,0.12);
-    --danger: #ef4444;
-    --success: #34d399;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f5f5f7;
-      --surface: #ffffff;
-      --surface2: #f0f0f5;
-      --border: #dddde8;
-      --accent: #6458e8;
-      --accent2: #7c6af7;
-      --accent-dim: rgba(100,88,232,0.1);
-      --text: #1a1a2e;
-      --text-muted: #888899;
-      --text-dim: #555566;
-      --fav: #e83e8c;
-      --tag-bg: rgba(100,88,232,0.08);
-      --danger: #dc2626;
-      --success: #059669;
-    }
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* grain overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.4;
-  }
-
-  @media (prefers-color-scheme: light) {
-    body::before { opacity: 0.15; }
-  }
-
-  header {
-    width: 100%;
-    max-width: 680px;
-    padding: 32px 20px 0;
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-  }
-
-  header h1 {
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
-  }
-
-  header span {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--accent);
-    background: var(--accent-dim);
-    padding: 2px 8px;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-  }
-
-  .main {
-    width: 100%;
-    max-width: 680px;
-    padding: 24px 20px 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  /* Composer */
-  .composer {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: border-color 0.2s;
-  }
-
-  .composer:focus-within {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-dim);
-  }
-
-  textarea {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    resize: none;
-    width: 100%;
-    min-height: 80px;
-  }
-
-  textarea::placeholder { color: var(--text-muted); }
-
-  .composer-footer {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .tag-input-wrap {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 180px;
-  }
-
-  .tag-input-wrap span {
-    font-size: 13px;
-    color: var(--text-muted);
-    white-space: nowrap;
-  }
-
-  input[type="text"] {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 6px 10px;
-    color: var(--text);
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 13px;
-    outline: none;
-    flex: 1;
-    transition: border-color 0.2s;
-  }
-
-  input[type="text"]:focus {
-    border-color: var(--accent);
-  }
-
-  .btn-post {
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.15s, transform 0.1s;
-    white-space: nowrap;
-  }
-
-  .btn-post:hover { background: var(--accent2); }
-  .btn-post:active { transform: scale(0.97); }
-
-  /* Filter bar */
-  .filter-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  .filter-bar input {
-    flex: 1;
-    min-width: 140px;
-  }
-
-  /* Export menu */
-  .export-wrap { position: relative; }
-
-  .btn-export {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text-dim);
-    border-radius: 10px;
-    padding: 7px 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-    letter-spacing: 0.03em;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .btn-export:hover {
-    border-color: var(--success);
-    color: var(--success);
-    background: rgba(52,211,153,0.08);
-  }
-
-  .export-dropdown {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 6px);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 6px;
-    min-width: 200px;
-    z-index: 100;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    display: none;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .export-dropdown.open { display: flex; }
-
-  .export-item {
-    background: none;
-    border: none;
-    color: var(--text-dim);
-    padding: 9px 12px;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    text-align: left;
-    font-family: 'Noto Sans JP', sans-serif;
-    transition: background 0.15s, color 0.15s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .export-item:hover { background: var(--surface2); color: var(--text); }
-
-  .export-item .ei-icon {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--success);
-    background: rgba(52,211,153,0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-    letter-spacing: 0.04em;
-  }
-
-  /* Google auth status */
-  .auth-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  .auth-bar .auth-avatar {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-
-  .auth-bar .auth-name {
-    flex: 1;
-    color: var(--text-dim);
-    font-size: 13px;
-  }
-
-  .btn-signout {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    border-radius: 8px;
-    padding: 4px 10px;
-    font-size: 12px;
-    cursor: pointer;
-    font-family: 'Noto Sans JP', sans-serif;
-    transition: all 0.15s;
-  }
-
-  .btn-signout:hover { border-color: var(--danger); color: var(--danger); }
-
-  /* Google Sheets button */
-  .btn-sheets {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text-dim);
-    border-radius: 10px;
-    padding: 7px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.03em;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .btn-sheets:hover {
-    border-color: #34a853;
-    color: #34a853;
-    background: rgba(52,168,83,0.08);
-  }
-
-  .btn-sheets.synced {
-    border-color: #34a853;
-    color: #34a853;
-  }
-
-  /* Modal */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(4px);
-    z-index: 200;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-
-  .modal-overlay.open { display: flex; }
-
-  .modal {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.6);
-    animation: modalIn 0.2s ease;
-  }
-
-  @keyframes modalIn {
-    from { opacity: 0; transform: scale(0.96) translateY(8px); }
-    to   { opacity: 1; transform: scale(1) translateY(0); }
-  }
-
-  .modal-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .modal-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  .modal-field { display: flex; flex-direction: column; gap: 6px; }
-
-  .modal-field label {
-    font-size: 12px;
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.04em;
-  }
-
-  .modal-field input {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-  }
-
-  .modal-actions {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
-
-  .btn-modal-cancel {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    border-radius: 10px;
-    padding: 8px 18px;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: 'Noto Sans JP', sans-serif;
-    transition: all 0.15s;
-  }
-
-  .btn-modal-cancel:hover { border-color: var(--text-muted); color: var(--text); }
-
-  .btn-modal-ok {
-    background: #34a853;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 8px 20px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: 'Noto Sans JP', sans-serif;
-    transition: background 0.15s;
-  }
-
-  .btn-modal-ok:hover { background: #2d9248; }
-
-  .modal-note {
-    font-size: 12px;
-    color: var(--text-muted);
-    background: var(--surface2);
-    border-radius: 8px;
-    padding: 10px 14px;
-    line-height: 1.7;
-    border-left: 3px solid var(--border);
-  }
-
-  .modal-note a {
-    color: var(--accent2);
-    text-decoration: none;
-  }
-
-  .modal-note a:hover { text-decoration: underline; }
-
-  /* Error modal */
-  .error-modal-title {
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--danger);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .error-modal-body {
-    font-size: 13px;
-    color: var(--text-dim);
-    line-height: 1.8;
-    white-space: pre-wrap;
-    background: var(--surface2);
-    border-radius: 10px;
-    padding: 12px 14px;
-    border-left: 3px solid var(--danger);
-  }
-
-  /* Toast */
-  .toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text);
-    padding: 10px 20px;
-    border-radius: 12px;
-    font-size: 14px;
-    z-index: 300;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    white-space: nowrap;
-  }
-
-  .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-
-  /* Feed */
-  .feed { display: flex; flex-direction: column; gap: 12px; }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    animation: slideIn 0.25s ease;
-    transition: border-color 0.2s;
-  }
-
-  .card:hover { border-color: #3a3a48; }
-
-  @media (prefers-color-scheme: light) {
-    .card:hover { border-color: #b0b0c8; }
-  }
-
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .card-text {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--text);
-    white-space: pre-wrap;
-    word-break: break-word;
-  }
-
-  .card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .tag {
-    background: var(--tag-bg);
-    color: var(--accent2);
-    border-radius: 6px;
-    padding: 2px 8px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-
-  .tag:hover { background: rgba(124,106,247,0.25); }
-  .tag.active-filter { background: var(--accent); color: #fff; }
-
-  .card-footer {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .card-time {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-    flex: 1;
-  }
-
-  .btn-fav {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: var(--text-muted);
-    font-size: 13px;
-    transition: color 0.15s;
-    padding: 4px 6px;
-    border-radius: 8px;
-  }
-
-  .btn-fav:hover { color: var(--fav); background: rgba(244,114,182,0.08); }
-  .btn-fav.faved { color: var(--fav); }
-  .btn-fav svg { width: 16px; height: 16px; }
-
-  .btn-delete {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-muted);
-    font-size: 12px;
-    padding: 4px 6px;
-    border-radius: 8px;
-    transition: color 0.15s;
-  }
-
-  .btn-delete:hover { color: var(--danger); background: rgba(239,68,68,0.08); }
-
-  .btn-edit {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-muted);
-    font-size: 12px;
-    padding: 4px 6px;
-    border-radius: 8px;
-    transition: color 0.15s;
-  }
-
-  .btn-edit:hover { color: var(--accent2); background: var(--accent-dim); }
-
-  /* Comments */
-  .comment-section {
-    border-top: 1px solid var(--border);
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .comment-item {
-    background: var(--surface2);
-    border-radius: 10px;
-    padding: 8px 12px;
-    font-size: 13px;
-    color: var(--text-dim);
-    line-height: 1.6;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .comment-item span { flex: 1; }
-
-  .comment-item button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--text-muted);
-    font-size: 11px;
-    padding: 2px 4px;
-    border-radius: 4px;
-    transition: color 0.15s;
-    flex-shrink: 0;
-  }
-
-  .comment-item button:hover { color: var(--danger); }
-
-  .comment-input-row {
-    display: flex;
-    gap: 8px;
-  }
-
-  .comment-input-row input { flex: 1; font-size: 13px; padding: 6px 10px; }
-
-  .btn-comment-send {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--accent2);
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.15s;
-    white-space: nowrap;
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-
-  .btn-comment-send:hover {
-    background: var(--accent-dim);
-    border-color: var(--accent);
-  }
-
-  /* Empty state */
-  .empty {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 14px;
-    padding: 48px 0;
-    line-height: 2;
-  }
-
-  .empty-icon { font-size: 32px; margin-bottom: 8px; }
-
-  /* Count badge */
-  .count-badge {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    color: var(--text-muted);
-    padding: 2px 0;
-  }
-
-  .fav-only-btn {
-    background: none;
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.15s;
-    font-family: 'Noto Sans JP', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .fav-only-btn.active { border-color: var(--fav); color: var(--fav); background: rgba(244,114,182,0.08); }
-  .fav-only-btn:hover { border-color: var(--fav); color: var(--fav); }
+  :root{--bg:#0f0f11;--surface:#18181c;--surface2:#202026;--border:#2a2a32;--accent:#7c6af7;--accent2:#a78bfa;--accent-dim:rgba(124,106,247,0.15);--text:#e8e8f0;--text-muted:#6b6b80;--text-dim:#9898aa;--fav:#f472b6;--tag-bg:rgba(124,106,247,0.12);--danger:#ef4444;--success:#34d399}
+  @media(prefers-color-scheme:light){:root{--bg:#f5f5f7;--surface:#ffffff;--surface2:#f0f0f5;--border:#dddde8;--accent:#6458e8;--accent2:#7c6af7;--accent-dim:rgba(100,88,232,0.1);--text:#1a1a2e;--text-muted:#888899;--text-dim:#555566;--fav:#e83e8c;--tag-bg:rgba(100,88,232,0.08);--danger:#dc2626;--success:#059669}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4}
+  @media(prefers-color-scheme:light){body::before{opacity:0.15}}
+  header{width:100%;max-width:680px;padding:32px 20px 0;display:flex;align-items:baseline;gap:12px}
+  header h1{font-size:22px;font-weight:700;letter-spacing:-0.5px;color:var(--text)}
+  header span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:4px;letter-spacing:0.05em}
+  .main{width:100%;max-width:680px;padding:24px 20px 80px;display:flex;flex-direction:column;gap:16px}
+  .composer{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:12px;transition:border-color 0.2s}
+  .composer:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+  textarea{background:transparent;border:none;outline:none;color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.7;resize:none;width:100%;min-height:80px}
+  textarea::placeholder{color:var(--text-muted)}
+  .composer-footer{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .tag-input-wrap{flex:1;display:flex;align-items:center;gap:6px;min-width:180px}
+  .tag-input-wrap span{font-size:13px;color:var(--text-muted);white-space:nowrap}
+  input[type="text"]{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:13px;outline:none;flex:1;transition:border-color 0.2s}
+  input[type="text"]:focus{border-color:var(--accent)}
+  .btn-post{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:8px 20px;font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.15s,transform 0.1s;white-space:nowrap}
+  .btn-post:hover{background:var(--accent2)}.btn-post:active{transform:scale(0.97)}
+  .filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .filter-bar input{flex:1;min-width:140px}
+  .export-wrap{position:relative}
+  .btn-export{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim);border-radius:10px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;letter-spacing:0.03em;display:flex;align-items:center;gap:5px}
+  .btn-export:hover{border-color:var(--success);color:var(--success);background:rgba(52,211,153,0.08)}
+  .export-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:6px;min-width:200px;z-index:100;box-shadow:0 8px 32px rgba(0,0,0,0.4);display:none;flex-direction:column;gap:2px}
+  .export-dropdown.open{display:flex}
+  .export-item{background:none;border:none;color:var(--text-dim);padding:9px 12px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Noto Sans JP',sans-serif;transition:background 0.15s,color 0.15s;display:flex;align-items:center;gap:8px}
+  .export-item:hover{background:var(--surface2);color:var(--text)}
+  .export-item .ei-icon{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--success);background:rgba(52,211,153,0.1);padding:2px 6px;border-radius:4px;letter-spacing:0.04em}
+  .auth-bar{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px 14px;font-size:13px}
+  .auth-bar .auth-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover}
+  .auth-bar .auth-name{flex:1;color:var(--text-dim);font-size:13px}
+  .btn-signout{background:none;border:1px solid var(--border);color:var(--text-muted);border-radius:8px;padding:4px 10px;font-size:12px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.15s}
+  .btn-signout:hover{border-color:var(--danger);color:var(--danger)}
+  .btn-sheets{background:var(--surface2);border:1px solid var(--border);color:var(--text-dim);border-radius:10px;padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;font-family:'JetBrains Mono',monospace;letter-spacing:0.03em;display:flex;align-items:center;gap:5px}
+  .btn-sheets:hover{border-color:#34a853;color:#34a853;background:rgba(52,168,83,0.08)}
+  .btn-sheets.synced{border-color:#34a853;color:#34a853}
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.open{display:flex}
+  .modal{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;width:100%;max-width:480px;display:flex;flex-direction:column;gap:16px;box-shadow:0 24px 64px rgba(0,0,0,0.6);animation:modalIn 0.2s ease}
+  @keyframes modalIn{from{opacity:0;transform:scale(0.96) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+  .modal-title{font-size:17px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px}
+  .modal-desc{font-size:13px;color:var(--text-muted);line-height:1.7}
+  .modal-field{display:flex;flex-direction:column;gap:6px}
+  .modal-field label{font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;letter-spacing:0.04em}
+  .modal-field input{font-family:'JetBrains Mono',monospace;font-size:12px}
+  .modal-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+  .btn-modal-cancel{background:none;border:1px solid var(--border);color:var(--text-muted);border-radius:10px;padding:8px 18px;font-size:14px;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.15s}
+  .btn-modal-cancel:hover{border-color:var(--text-muted);color:var(--text)}
+  .btn-modal-ok{background:#34a853;color:#fff;border:none;border-radius:10px;padding:8px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:background 0.15s}
+  .btn-modal-ok:hover{background:#2d9248}
+  .modal-note{font-size:12px;color:var(--text-muted);background:var(--surface2);border-radius:8px;padding:10px 14px;line-height:1.7;border-left:3px solid var(--border)}
+  .modal-note a{color:var(--accent2);text-decoration:none}.modal-note a:hover{text-decoration:underline}
+  .error-modal-title{font-size:16px;font-weight:700;color:var(--danger);display:flex;align-items:center;gap:8px}
+  .error-modal-body{font-size:13px;color:var(--text-dim);line-height:1.8;white-space:pre-wrap;background:var(--surface2);border-radius:10px;padding:12px 14px;border-left:3px solid var(--danger)}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--surface);border:1px solid var(--border);color:var(--text);padding:10px 20px;border-radius:12px;font-size:14px;z-index:300;box-shadow:0 8px 24px rgba(0,0,0,0.4);transition:transform 0.3s ease,opacity 0.3s ease;opacity:0;white-space:nowrap}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+  .feed{display:flex;flex-direction:column;gap:12px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;animation:slideIn 0.25s ease;transition:border-color 0.2s}
+  .card:hover{border-color:#3a3a48}
+  @media(prefers-color-scheme:light){.card:hover{border-color:#b0b0c8}}
+  @keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+  .card-text{font-size:15px;line-height:1.75;color:var(--text);white-space:pre-wrap;word-break:break-word}
+  .card-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{background:var(--tag-bg);color:var(--accent2);border-radius:6px;padding:2px 8px;font-size:12px;font-weight:500;cursor:pointer;transition:background 0.15s}
+  .tag:hover{background:rgba(124,106,247,0.25)}.tag.active-filter{background:var(--accent);color:#fff}
+  .card-footer{display:flex;align-items:center;gap:12px}
+  .card-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);flex:1}
+  .btn-fav{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:5px;color:var(--text-muted);font-size:13px;transition:color 0.15s;padding:4px 6px;border-radius:8px}
+  .btn-fav:hover{color:var(--fav);background:rgba(244,114,182,0.08)}.btn-fav.faved{color:var(--fav)}.btn-fav svg{width:16px;height:16px}
+  .btn-delete{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:12px;padding:4px 6px;border-radius:8px;transition:color 0.15s}
+  .btn-delete:hover{color:var(--danger);background:rgba(239,68,68,0.08)}
+  .btn-edit{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:12px;padding:4px 6px;border-radius:8px;transition:color 0.15s}
+  .btn-edit:hover{color:var(--accent2);background:var(--accent-dim)}
+  .comment-section{border-top:1px solid var(--border);padding-top:10px;display:flex;flex-direction:column;gap:8px}
+  .comment-item{background:var(--surface2);border-radius:10px;padding:8px 12px;font-size:13px;color:var(--text-dim);line-height:1.6;display:flex;align-items:flex-start;gap:8px}
+  .comment-item span{flex:1}
+  .comment-item button{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:11px;padding:2px 4px;border-radius:4px;transition:color 0.15s;flex-shrink:0}
+  .comment-item button:hover{color:var(--danger)}
+  .comment-input-row{display:flex;gap:8px}
+  .comment-input-row input{flex:1;font-size:13px;padding:6px 10px}
+  .btn-comment-send{background:var(--surface2);border:1px solid var(--border);color:var(--accent2);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;transition:all 0.15s;white-space:nowrap;font-family:'Noto Sans JP',sans-serif}
+  .btn-comment-send:hover{background:var(--accent-dim);border-color:var(--accent)}
+  .empty{text-align:center;color:var(--text-muted);font-size:14px;padding:48px 0;line-height:2}
+  .empty-icon{font-size:32px;margin-bottom:8px}
+  .count-badge{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);padding:2px 0}
+  .fav-only-btn{background:none;border:1px solid var(--border);color:var(--text-muted);border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;transition:all 0.15s;font-family:'Noto Sans JP',sans-serif;display:flex;align-items:center;gap:5px}
+  .fav-only-btn.active{border-color:var(--fav);color:var(--fav);background:rgba(244,114,182,0.08)}
+  .fav-only-btn:hover{border-color:var(--fav);color:var(--fav)}
 </style>
 </head>
 <body>
-
-<!-- Google Identity Services -->
-<script src="https://accounts.google.com/gsi/client" async></script>
-
-<header>
-  <h1>棚卸しノート</h1>
-  <span>CAREER MEMO</span>
-</header>
-
+<header><h1>棚卸しノート</h1><span>CAREER MEMO</span></header>
 <div class="main">
-
-  <!-- Composer -->
   <div class="composer">
     <textarea id="postText" placeholder="気づいたこと、やってきたこと、スキル… 思いついたまま書いて投稿" rows="3"></textarea>
     <div class="composer-footer">
-      <div class="tag-input-wrap">
-        <span>🏷</span>
-        <input type="text" id="tagInput" placeholder="タグ（スペース区切りで複数可）">
-      </div>
+      <div class="tag-input-wrap"><span>🏷</span><input type="text" id="tagInput" placeholder="タグ（スペース区切りで複数可）"></div>
       <button class="btn-post" onclick="postMemo()">投稿</button>
     </div>
   </div>
-
-  <!-- Filter bar -->
   <div class="filter-bar">
     <input type="text" id="searchInput" placeholder="🔍 キーワードで絞り込み" oninput="renderFeed()">
     <button class="fav-only-btn" id="favOnlyBtn" onclick="toggleFavOnly()">
       <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
       ファボのみ
     </button>
-    <!-- Export menu -->
     <div class="export-wrap" id="exportWrap">
       <button class="btn-export" onclick="toggleExportMenu()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         出力
       </button>
       <div class="export-dropdown" id="exportDropdown">
-        <button class="export-item" onclick="exportCSV()">
-          <span class="ei-icon">CSV</span>Excelで開く用
-        </button>
-        <button class="export-item" onclick="exportMarkdown()">
-          <span class="ei-icon">MD</span>Markdownメモ
-        </button>
-        <button class="export-item" onclick="exportResume()">
-          <span class="ei-icon">JD</span>職務経歴書フォーマット
-        </button>
+        <button class="export-item" onclick="exportCSV()"><span class="ei-icon">CSV</span>Excelで開く用</button>
+        <button class="export-item" onclick="exportMarkdown()"><span class="ei-icon">MD</span>Markdownメモ</button>
+        <button class="export-item" onclick="exportResume()"><span class="ei-icon">JD</span>職務経歴書フォーマット</button>
       </div>
     </div>
-    <!-- Sheets sync -->
     <button class="btn-sheets" id="sheetsBtn" onclick="openSheetsModal()">
       <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
       Sheets
     </button>
   </div>
-
-  <!-- Auth bar (shown when signed in) -->
   <div class="auth-bar" id="authBar" style="display:none;">
     <img class="auth-avatar" id="authAvatar" src="" alt="">
     <span class="auth-name" id="authName"></span>
     <button class="btn-signout" onclick="signOut()">サインアウト</button>
   </div>
-
-  <!-- Sheets modal -->
-  <div class="modal-overlay" id="sheetsModal">
-    <div class="modal">
-      <div class="modal-title">📊 Google Sheets 同期</div>
-      <p class="modal-desc">同期先のスプレッドシートIDを入力してください。スプレッドシートはあなたのGoogleアカウントでアクセスできるものを指定してください。</p>
-      <div class="modal-field">
-        <label>SPREADSHEET ID</label>
-        <input type="text" id="sheetsId" placeholder="ここにスプレッドシートIDを貼り付け">
-      </div>
-      <div class="modal-field">
-        <label>シート名</label>
-        <input type="text" id="sheetsSheet" placeholder="棚卸し" value="棚卸し">
-      </div>
-      <div class="modal-note">
-        💡 スプレッドシートIDはURLの <code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:11px;">/d/【ここ】/edit</code> の部分です
-      </div>
-      <div class="modal-actions">
-        <button class="btn-modal-cancel" onclick="closeSheetsModal()">キャンセル</button>
-        <button class="btn-modal-ok" onclick="syncToSheets()">同期する</button>
-      </div>
+  <div class="modal-overlay" id="sheetsModal"><div class="modal">
+    <div class="modal-title">📊 Google Sheets 同期</div>
+    <p class="modal-desc">同期先のスプレッドシートIDを入力してください。</p>
+    <div class="modal-field"><label>SPREADSHEET ID</label><input type="text" id="sheetsId" placeholder="ここにスプレッドシートIDを貼り付け"></div>
+    <div class="modal-field"><label>シート名</label><input type="text" id="sheetsSheet" placeholder="棚卸し" value="棚卸し"></div>
+    <div class="modal-note">💡 スプレッドシートIDはURLの <code style="background:var(--surface2);padding:1px 5px;border-radius:3px;font-size:11px;">/d/【ここ】/edit</code> の部分です</div>
+    <div class="modal-actions">
+      <button class="btn-modal-cancel" onclick="closeSheetsModal()">キャンセル</button>
+      <button class="btn-modal-ok" onclick="syncToSheets()">同期する</button>
     </div>
-  </div>
-
-  <!-- Comment delete confirmation modal -->
-  <div class="modal-overlay" id="commentDeleteModal">
-    <div class="modal">
-      <div class="modal-title">🗑 コメントを削除しますか？</div>
-      <p class="modal-desc" id="commentDeletePreview" style="background:var(--surface2);border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.7;color:var(--text-dim);border-left:3px solid var(--danger);"></p>
-      <div class="modal-actions">
-        <button class="btn-modal-cancel" onclick="closeCommentDeleteModal()">キャンセル</button>
-        <button class="btn-modal-ok" id="commentDeleteOk" style="background:var(--danger);">削除する</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Comment edit modal -->
-  <div class="modal-overlay" id="commentEditModal">
-    <div class="modal">
-      <div class="modal-title">✏️ コメントを編集</div>
-      <div class="modal-field">
-        <input type="text" id="commentEditText" placeholder="コメントを編集…">
-      </div>
-      <div class="modal-actions">
-        <button class="btn-modal-cancel" onclick="closeCommentEditModal()">キャンセル</button>
-        <button class="btn-modal-ok" id="commentEditOk">保存する</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Edit modal -->
-  <div class="modal-overlay" id="editModal">
-    <div class="modal">
-      <div class="modal-title">✏️ メモを編集</div>
-      <div class="modal-field">
-        <textarea id="editText" style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:1.7;resize:vertical;width:100%;min-height:120px;outline:none;" placeholder="メモを編集…"></textarea>
-      </div>
-      <div class="modal-field">
-        <label>タグ</label>
-        <input type="text" id="editTags" placeholder="タグ（スペース区切りで複数可）">
-      </div>
-      <div class="modal-actions">
-        <button class="btn-modal-cancel" onclick="closeEditModal()">キャンセル</button>
-        <button class="btn-modal-ok" id="editModalOk">保存する</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Delete confirmation modal -->
-  <div class="modal-overlay" id="deleteModal">
-    <div class="modal">
-      <div class="modal-title">🗑 メモを削除しますか？</div>
-      <p class="modal-desc" id="deleteModalPreview" style="background:var(--surface2);border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.7;color:var(--text-dim);border-left:3px solid var(--danger);"></p>
-      <div class="modal-actions">
-        <button class="btn-modal-cancel" onclick="closeDeleteModal()">キャンセル</button>
-        <button class="btn-modal-ok" id="deleteModalOk" style="background:var(--danger);">削除する</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Error modal -->
-  <div class="modal-overlay" id="errorModal">
-    <div class="modal">
-      <div class="error-modal-title">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        <span id="errorModalTitle"></span>
-      </div>
-      <div class="error-modal-body" id="errorModalBody"></div>
-      <div class="modal-actions">
-        <button class="btn-modal-ok" onclick="closeErrorModal()" style="background:var(--accent);">閉じる</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast -->
+  </div></div>
+  <div class="modal-overlay" id="commentDeleteModal"><div class="modal">
+    <div class="modal-title">🗑 コメントを削除しますか？</div>
+    <p class="modal-desc" id="commentDeletePreview" style="background:var(--surface2);border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.7;color:var(--text-dim);border-left:3px solid var(--danger);"></p>
+    <div class="modal-actions"><button class="btn-modal-cancel" onclick="closeCommentDeleteModal()">キャンセル</button><button class="btn-modal-ok" id="commentDeleteOk" style="background:var(--danger);">削除する</button></div>
+  </div></div>
+  <div class="modal-overlay" id="commentEditModal"><div class="modal">
+    <div class="modal-title">✏️ コメントを編集</div>
+    <div class="modal-field"><input type="text" id="commentEditText" placeholder="コメントを編集…"></div>
+    <div class="modal-actions"><button class="btn-modal-cancel" onclick="closeCommentEditModal()">キャンセル</button><button class="btn-modal-ok" id="commentEditOk">保存する</button></div>
+  </div></div>
+  <div class="modal-overlay" id="editModal"><div class="modal">
+    <div class="modal-title">✏️ メモを編集</div>
+    <div class="modal-field"><textarea id="editText" style="background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:1.7;resize:vertical;width:100%;min-height:120px;outline:none;" placeholder="メモを編集…"></textarea></div>
+    <div class="modal-field"><label>タグ</label><input type="text" id="editTags" placeholder="タグ（スペース区切りで複数可）"></div>
+    <div class="modal-actions"><button class="btn-modal-cancel" onclick="closeEditModal()">キャンセル</button><button class="btn-modal-ok" id="editModalOk">保存する</button></div>
+  </div></div>
+  <div class="modal-overlay" id="deleteModal"><div class="modal">
+    <div class="modal-title">🗑 メモを削除しますか？</div>
+    <p class="modal-desc" id="deleteModalPreview" style="background:var(--surface2);border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.7;color:var(--text-dim);border-left:3px solid var(--danger);"></p>
+    <div class="modal-actions"><button class="btn-modal-cancel" onclick="closeDeleteModal()">キャンセル</button><button class="btn-modal-ok" id="deleteModalOk" style="background:var(--danger);">削除する</button></div>
+  </div></div>
+  <div class="modal-overlay" id="errorModal"><div class="modal">
+    <div class="error-modal-title"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span id="errorModalTitle"></span></div>
+    <div class="error-modal-body" id="errorModalBody"></div>
+    <div class="modal-actions"><button class="btn-modal-ok" onclick="closeErrorModal()" style="background:var(--accent);">閉じる</button></div>
+  </div></div>
   <div class="toast" id="toast"></div>
-
-  <!-- Tag filter row -->
   <div id="tagFilterRow" class="card-tags" style="min-height:0;padding:0;background:none;border:none;"></div>
-
-  <!-- Count -->
   <div class="count-badge" id="countBadge"></div>
-
-  <!-- Feed -->
   <div class="feed" id="feed"></div>
-
 </div>
-
 <script>
-  // ── URL パラメータからSheets設定を自動入力 ──────────
-  (function() {
-    const params = new URLSearchParams(window.location.search);
-    const sid = params.get('sid');
-    const sheet = params.get('sheet');
-    if (sid) {
-      const current = JSON.parse(localStorage.getItem('sheets_config') || '{}');
-      current.id = sid;
-      if (sheet) current.sheet = sheet;
-      localStorage.setItem('sheets_config', JSON.stringify(current));
-      // URLはそのまま維持（ホーム画面追加のため書き換えない）
+// ── URL params → sheets config ──
+(function(){
+  var p=new URLSearchParams(window.location.search),sid=p.get('sid'),sh=p.get('sheet');
+  if(sid){var c=JSON.parse(localStorage.getItem('sheets_config')||'{}');c.id=sid;if(sh)c.sheet=sh;localStorage.setItem('sheets_config',JSON.stringify(c))}
+})();
+
+// ── OAuth redirect: extract token from hash ──
+(function(){
+  var h=window.location.hash;
+  if(h&&h.indexOf('access_token')!==-1){
+    var p=new URLSearchParams(h.substring(1));
+    var tk=p.get('access_token'),ex=parseInt(p.get('expires_in')||'3600',10);
+    if(tk){
+      localStorage.setItem('goog_access_token',tk);
+      localStorage.setItem('goog_token_expiry',String(Date.now()+ex*1000));
+      history.replaceState(null,'',window.location.pathname+window.location.search);
     }
-  })();
-
-  let memos = JSON.parse(localStorage.getItem('tana_memos') || '[]');
-  let activeTagFilter = null;
-  let favOnly = false;
-
-  function save() {
-    localStorage.setItem('tana_memos', JSON.stringify(memos));
   }
+})();
 
-  function postMemo() {
-    const text = document.getElementById('postText').value.trim();
-    if (!text) return;
-    const tagRaw = document.getElementById('tagInput').value.trim();
-    const tags = tagRaw ? tagRaw.split(/\s+/).filter(Boolean).map(t => t.replace(/^#/, '')) : [];
-    const memo = {
-      id: Date.now(),
-      text,
-      tags,
-      fav: false,
-      comments: [],
-      createdAt: new Date().toISOString()
-    };
-    memos.unshift(memo);
-    save();
-    document.getElementById('postText').value = '';
-    document.getElementById('tagInput').value = '';
-    renderFeed();
-    renderTagFilters();
-    autoSync();
-  }
+var memos=JSON.parse(localStorage.getItem('tana_memos')||'[]');
+var activeTagFilter=null,favOnly=false;
 
-  function toggleFav(id) {
-    const m = memos.find(m => m.id === id);
-    if (m) { m.fav = !m.fav; save(); renderFeed(); autoSync(); }
-  }
+var GOOG_CLIENT_ID='652465897727-iol58291edt5drn7r3d1ah5k2atjk6u8.apps.googleusercontent.com';
+var GOOG_SCOPE='https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/userinfo.profile';
+var gAccessToken=null;
 
-  function deleteMemo(id) {
-    const m = memos.find(m => m.id === id);
-    if (!m) return;
-    // プレビューテキスト（最大40文字）
-    const preview = m.text.length > 40 ? m.text.slice(0, 40) + '…' : m.text;
-    document.getElementById('deleteModalPreview').textContent = preview;
-    document.getElementById('deleteModalOk').onclick = () => {
-      memos = memos.filter(m => m.id !== id);
-      save();
-      renderFeed();
-      renderTagFilters();
-      closeDeleteModal();
-      autoSync();
-    };
-    document.getElementById('deleteModal').classList.add('open');
-  }
+// restore saved token
+(function(){
+  var s=localStorage.getItem('goog_access_token'),e=parseInt(localStorage.getItem('goog_token_expiry')||'0',10);
+  if(s&&Date.now()<e){gAccessToken=s}else{localStorage.removeItem('goog_access_token');localStorage.removeItem('goog_token_expiry')}
+})();
 
-  function closeDeleteModal() {
-    document.getElementById('deleteModal').classList.remove('open');
-  }
+function startOAuthRedirect(){
+  localStorage.setItem('oauth_return_url',window.location.pathname+window.location.search);
+  var ru=window.location.origin+window.location.pathname;
+  var u='https://accounts.google.com/o/oauth2/v2/auth?client_id='+encodeURIComponent(GOOG_CLIENT_ID)+'&redirect_uri='+encodeURIComponent(ru)+'&response_type=token&scope='+encodeURIComponent(GOOG_SCOPE)+'&prompt=select_account&include_granted_scopes=true';
+  window.location.href=u;
+}
 
-  document.getElementById('deleteModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('deleteModal')) closeDeleteModal();
+function save(){localStorage.setItem('tana_memos',JSON.stringify(memos))}
+
+function postMemo(){
+  var t=document.getElementById('postText').value.trim();if(!t)return;
+  var tr=document.getElementById('tagInput').value.trim();
+  var tags=tr?tr.split(/\s+/).filter(Boolean).map(function(x){return x.replace(/^#/,'')}):[];
+  memos.unshift({id:Date.now(),text:t,tags:tags,fav:false,comments:[],createdAt:new Date().toISOString()});
+  save();document.getElementById('postText').value='';document.getElementById('tagInput').value='';
+  renderFeed();renderTagFilters();autoSync();
+}
+
+function toggleFav(id){var m=memos.find(function(x){return x.id===id});if(m){m.fav=!m.fav;save();renderFeed();autoSync()}}
+
+function deleteMemo(id){
+  var m=memos.find(function(x){return x.id===id});if(!m)return;
+  var pv=m.text.length>40?m.text.slice(0,40)+'…':m.text;
+  document.getElementById('deleteModalPreview').textContent=pv;
+  document.getElementById('deleteModalOk').onclick=function(){
+    memos=memos.filter(function(x){return x.id!==id});save();renderFeed();renderTagFilters();closeDeleteModal();autoSync();
+  };
+  document.getElementById('deleteModal').classList.add('open');
+}
+function closeDeleteModal(){document.getElementById('deleteModal').classList.remove('open')}
+document.getElementById('deleteModal').addEventListener('click',function(e){if(e.target===document.getElementById('deleteModal'))closeDeleteModal()});
+
+function openEditModal(id){
+  var m=memos.find(function(x){return x.id===id});if(!m)return;
+  document.getElementById('editText').value=m.text;
+  document.getElementById('editTags').value=m.tags.join(' ');
+  document.getElementById('editModalOk').onclick=function(){
+    var nt=document.getElementById('editText').value.trim();
+    if(!nt){showToast('⚠️ テキストを入力してください');return}
+    var tr=document.getElementById('editTags').value.trim();
+    m.text=nt;m.tags=tr?tr.split(/\s+/).filter(Boolean).map(function(x){return x.replace(/^#/,'')}):[];
+    save();renderFeed();renderTagFilters();closeEditModal();showToast('✅ メモを更新しました','var(--success)');autoSync();
+  };
+  document.getElementById('editModal').classList.add('open');
+}
+function closeEditModal(){document.getElementById('editModal').classList.remove('open')}
+document.getElementById('editModal').addEventListener('click',function(e){if(e.target===document.getElementById('editModal'))closeEditModal()});
+
+function addComment(id){
+  var inp=document.getElementById('ci_'+id);var t=inp.value.trim();if(!t)return;
+  var m=memos.find(function(x){return x.id===id});
+  if(m){m.comments.push({id:Date.now(),text:t});save();renderFeed();autoSync()}
+}
+
+function openCommentDeleteModal(mid,cid){
+  var m=memos.find(function(x){return x.id===mid});var c=m&&m.comments.find(function(x){return x.id===cid});if(!c)return;
+  document.getElementById('commentDeletePreview').textContent=c.text.length>40?c.text.slice(0,40)+'…':c.text;
+  document.getElementById('commentDeleteOk').onclick=function(){
+    m.comments=m.comments.filter(function(x){return x.id!==cid});save();renderFeed();closeCommentDeleteModal();autoSync();
+  };
+  document.getElementById('commentDeleteModal').classList.add('open');
+}
+function closeCommentDeleteModal(){document.getElementById('commentDeleteModal').classList.remove('open')}
+document.getElementById('commentDeleteModal').addEventListener('click',function(e){if(e.target===document.getElementById('commentDeleteModal'))closeCommentDeleteModal()});
+
+function openCommentEditModal(mid,cid){
+  var m=memos.find(function(x){return x.id===mid});var c=m&&m.comments.find(function(x){return x.id===cid});if(!c)return;
+  document.getElementById('commentEditText').value=c.text;
+  document.getElementById('commentEditOk').onclick=function(){
+    var nt=document.getElementById('commentEditText').value.trim();
+    if(!nt){showToast('⚠️ テキストを入力してください');return}
+    c.text=nt;save();renderFeed();closeCommentEditModal();showToast('✅ コメントを更新しました','var(--success)');autoSync();
+  };
+  document.getElementById('commentEditModal').classList.add('open');
+}
+function closeCommentEditModal(){document.getElementById('commentEditModal').classList.remove('open')}
+document.getElementById('commentEditModal').addEventListener('click',function(e){if(e.target===document.getElementById('commentEditModal'))closeCommentEditModal()});
+
+function setTagFilter(tag){activeTagFilter=activeTagFilter===tag?null:tag;renderFeed();renderTagFilters()}
+function toggleFavOnly(){favOnly=!favOnly;document.getElementById('favOnlyBtn').classList.toggle('active',favOnly);renderFeed()}
+function getAllTags(){var s=new Set();memos.forEach(function(m){m.tags.forEach(function(t){s.add(t)})});return Array.from(s)}
+
+function renderTagFilters(){
+  var tags=getAllTags(),row=document.getElementById('tagFilterRow');
+  if(!tags.length){row.innerHTML='';return}
+  row.innerHTML=tags.map(function(t){return '<span class="tag '+(activeTagFilter===t?'active-filter':'')+'" onclick="setTagFilter(\''+t+'\')">#'+t+'</span>'}).join('');
+}
+
+function getFiltered(){
+  var q=document.getElementById('searchInput').value.trim().toLowerCase();
+  return memos.filter(function(m){
+    if(favOnly&&!m.fav)return false;
+    if(activeTagFilter&&m.tags.indexOf(activeTagFilter)===-1)return false;
+    if(q&&m.text.toLowerCase().indexOf(q)===-1&&m.tags.join(' ').toLowerCase().indexOf(q)===-1)return false;
+    return true;
   });
+}
 
-  // ── Edit modal ────────────────────────────────────
-  function openEditModal(id) {
-    const m = memos.find(m => m.id === id);
-    if (!m) return;
-    document.getElementById('editText').value = m.text;
-    document.getElementById('editTags').value = m.tags.join(' ');
-    document.getElementById('editModalOk').onclick = () => {
-      const newText = document.getElementById('editText').value.trim();
-      if (!newText) { showToast('⚠️ テキストを入力してください'); return; }
-      const tagRaw = document.getElementById('editTags').value.trim();
-      m.text = newText;
-      m.tags = tagRaw ? tagRaw.split(/\s+/).filter(Boolean).map(t => t.replace(/^#/, '')) : [];
-      save();
-      renderFeed();
-      renderTagFilters();
-      closeEditModal();
-      showToast('✅ メモを更新しました', 'var(--success)');
-      autoSync();
-    };
-    document.getElementById('editModal').classList.add('open');
+function fmtDate(iso){var d=new Date(iso);function p(n){return String(n).padStart(2,'0')}return d.getFullYear()+'/'+p(d.getMonth()+1)+'/'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())}
+
+function renderFeed(){
+  var filtered=getFiltered(),feed=document.getElementById('feed'),badge=document.getElementById('countBadge');
+  badge.textContent=filtered.length>0?filtered.length+' 件':'';
+  if(!filtered.length){feed.innerHTML='<div class="empty"><div class="empty-icon">📭</div>まだメモがありません<br>思いついたことをどんどん投稿してみましょう</div>';return}
+  feed.innerHTML=filtered.map(function(m){
+    var th=m.tags.length?'<div class="card-tags">'+m.tags.map(function(t){return '<span class="tag" onclick="setTagFilter(\''+t+'\')">#'+t+'</span>'}).join('')+'</div>':'';
+    var ch=m.comments.length?m.comments.map(function(c){return '<div class="comment-item"><span>'+escHtml(c.text)+'</span><button onclick="openCommentEditModal('+m.id+','+c.id+')" title="編集">✏️</button><button onclick="openCommentDeleteModal('+m.id+','+c.id+')" title="削除">✕</button></div>'}).join(''):'';
+    var fi=m.fav?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>':'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+    return '<div class="card" id="card_'+m.id+'"><div class="card-text">'+escHtml(m.text)+'</div>'+th+'<div class="card-footer"><span class="card-time">'+fmtDate(m.createdAt)+'</span><button class="btn-fav '+(m.fav?'faved':'')+'" onclick="toggleFav('+m.id+')" title="ファボ">'+fi+(m.fav?'ファボ済':'ファボ')+'</button><button class="btn-delete" onclick="deleteMemo('+m.id+')" title="削除">🗑</button><button class="btn-edit" onclick="openEditModal('+m.id+')" title="編集">✏️</button></div><div class="comment-section" style="flex-direction:column;gap:8px;">'+ch+'<div class="comment-input-row"><input type="text" id="ci_'+m.id+'" placeholder="コメントを追加…" onkeydown="if(event.key===\'Enter\')addComment('+m.id+')"><button class="btn-comment-send" onclick="addComment('+m.id+')">追加</button></div></div></div>';
+  }).join('');
+}
+
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+function showErrorModal(t,b){document.getElementById('errorModalTitle').textContent=t;document.getElementById('errorModalBody').textContent=b;document.getElementById('errorModal').classList.add('open')}
+function closeErrorModal(){document.getElementById('errorModal').classList.remove('open')}
+document.getElementById('errorModal').addEventListener('click',function(e){if(e.target===document.getElementById('errorModal'))closeErrorModal()});
+
+function toggleExportMenu(){document.getElementById('exportDropdown').classList.toggle('open')}
+document.addEventListener('click',function(e){var w=document.getElementById('exportWrap');if(w&&!w.contains(e.target))document.getElementById('exportDropdown').classList.remove('open')});
+
+function showToast(msg,color){var t=document.getElementById('toast');t.textContent=msg;t.style.borderColor=color||'var(--border)';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2800)}
+
+function download(content,filename,type){var bom=type.indexOf('csv')!==-1?'\uFEFF':'';var blob=new Blob([bom+content],{type:type});var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download=filename;a.click();URL.revokeObjectURL(url)}
+
+function exportCSV(){
+  document.getElementById('exportDropdown').classList.remove('open');
+  var f=getFiltered();if(!f.length){showToast('出力するメモがありません');return}
+  var h=['日時','テキスト','タグ','ファボ','コメント数'];
+  var r=f.map(function(m){return[fmtDate(m.createdAt),'"'+m.text.replace(/"/g,'""')+'"','"'+m.tags.join(' ')+'"',m.fav?'★':'',m.comments.length]});
+  var csv=[h].concat(r).map(function(x){return x.join(',')}).join('\n');
+  download(csv,'tana-oroshi_'+today()+'.csv','text/csv;charset=utf-8;');showToast('✅ CSV を出力しました','var(--success)');
+}
+
+function exportMarkdown(){
+  document.getElementById('exportDropdown').classList.remove('open');
+  var f=getFiltered();if(!f.length){showToast('出力するメモがありません');return}
+  var l=['# 棚卸しノート\n_出力日: '+today()+'_\n'];
+  f.forEach(function(m){l.push('## '+fmtDate(m.createdAt)+(m.fav?' ★':''));if(m.tags.length)l.push(m.tags.map(function(t){return '`#'+t+'`'}).join(' '));l.push('');l.push(m.text);if(m.comments.length){l.push('');m.comments.forEach(function(c){l.push('> '+c.text)})}l.push('\n---\n')});
+  download(l.join('\n'),'tana-oroshi_'+today()+'.md','text/markdown;charset=utf-8;');showToast('✅ Markdown を出力しました','var(--success)');
+}
+
+function exportResume(){
+  document.getElementById('exportDropdown').classList.remove('open');
+  var f=getFiltered();if(!f.length){showToast('出力するメモがありません');return}
+  var groups={},noTag=[];
+  f.forEach(function(m){if(!m.tags.length){noTag.push(m);return}m.tags.forEach(function(t){if(!groups[t])groups[t]=[];groups[t].push(m)})});
+  var sep='─'.repeat(40);
+  var l=['【職務経歴書 素材メモ】','出力日：'+today()+'　　件数：'+f.length+'件（ファボ：'+f.filter(function(m){return m.fav}).length+'件）',sep,''];
+  var favs=f.filter(function(m){return m.fav});
+  if(favs.length){l.push('★ 強み・アピールポイント（ファボ済み）');favs.forEach(function(m,i){l.push('  '+(i+1)+'. '+m.text.replace(/\n/g,' '));if(m.comments.length)m.comments.forEach(function(c){l.push('     → '+c.text)})});l.push('',sep,'')}
+  Object.entries(groups).forEach(function(e){var tag=e[0],items=e[1];l.push('■ #'+tag+'（'+items.length+'件）');l.push('');items.forEach(function(m,i){l.push('  '+(i+1)+'. '+m.text.replace(/\n/g,'\n     '));if(m.comments.length)m.comments.forEach(function(c){l.push('     補足：'+c.text)});l.push('')});l.push(sep,'')});
+  if(noTag.length){l.push('■ 未分類（'+noTag.length+'件）','');noTag.forEach(function(m,i){l.push('  '+(i+1)+'. '+m.text.replace(/\n/g,'\n     '));l.push('')})}
+  download(l.join('\n'),'resume-material_'+today()+'.txt','text/plain;charset=utf-8;');showToast('✅ 職務経歴書素材を出力しました','var(--success)');
+}
+
+function today(){return new Date().toISOString().slice(0,10)}
+
+async function autoSync(){
+  if(!gAccessToken)return;
+  var config=JSON.parse(localStorage.getItem('sheets_config')||'{}');if(!config.id)return;
+  var sheet=config.sheet||'棚卸し';
+  var values=[['日時','テキスト','タグ','ファボ','コメント数','コメント内容','ID']].concat(memos.map(function(m){return[fmtDate(m.createdAt),m.text,m.tags.join(' '),m.fav?'★':'',m.comments.length,m.comments.map(function(c){return c.text}).join(' | '),String(m.id)]}));
+  try{
+    var res=await fetch('https://sheets.googleapis.com/v4/spreadsheets/'+config.id+'/values/'+encodeURIComponent(sheet+'!A1')+'?valueInputOption=RAW',{method:'PUT',headers:{'Content-Type':'application/json','Authorization':'Bearer '+gAccessToken},body:JSON.stringify({range:sheet+'!A1',majorDimension:'ROWS',values:values})});
+    if(res.status===401){gAccessToken=null;localStorage.removeItem('goog_access_token');localStorage.removeItem('goog_token_expiry')}
+    else if(!res.ok){showToast('⚠️ 自動同期に失敗しました','var(--danger)')}
+  }catch(e){}
+}
+
+async function fetchUserInfo(){
+  try{
+    var res=await fetch('https://www.googleapis.com/oauth2/v3/userinfo',{headers:{Authorization:'Bearer '+gAccessToken}});
+    if(!res.ok){gAccessToken=null;localStorage.removeItem('goog_access_token');localStorage.removeItem('goog_token_expiry');document.getElementById('authBar').style.display='none';return}
+    var u=await res.json();
+    document.getElementById('authName').textContent=u.name||u.email;
+    if(u.picture)document.getElementById('authAvatar').src=u.picture;
+    document.getElementById('authBar').style.display='flex';
+  }catch(e){}
+}
+
+function signOut(){
+  gAccessToken=null;localStorage.removeItem('goog_access_token');localStorage.removeItem('goog_token_expiry');
+  document.getElementById('authBar').style.display='none';
+  var btn=document.getElementById('sheetsBtn');btn.classList.remove('synced');
+  btn.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets';
+  showToast('サインアウトしました');
+}
+
+function openSheetsModal(){
+  if(!gAccessToken){startOAuthRedirect();return}
+  var saved=JSON.parse(localStorage.getItem('sheets_config')||'{}');
+  if(saved.id)document.getElementById('sheetsId').value=saved.id;
+  if(saved.sheet)document.getElementById('sheetsSheet').value=saved.sheet;
+  document.getElementById('sheetsModal').classList.add('open');
+}
+function closeSheetsModal(){document.getElementById('sheetsModal').classList.remove('open')}
+
+async function syncToSheets(){
+  var id=document.getElementById('sheetsId').value.trim(),sheet=document.getElementById('sheetsSheet').value.trim()||'棚卸し';
+  if(!id){showToast('⚠️ スプレッドシートIDを入力してください','var(--danger)');return}
+  if(!gAccessToken){showToast('⚠️ 先にGoogleサインインしてください','var(--danger)');return}
+  localStorage.setItem('sheets_config',JSON.stringify({id:id,sheet:sheet}));closeSheetsModal();
+  var btn=document.getElementById('sheetsBtn');btn.textContent='同期中…';
+  try{
+    var getRes=await fetch('https://sheets.googleapis.com/v4/spreadsheets/'+id+'/values/'+encodeURIComponent(sheet+'!A:G'),{headers:{'Authorization':'Bearer '+gAccessToken}});
+    if(!getRes.ok){var err=await getRes.json();handleSheetsError(getRes.status,err.error&&err.error.message||'',btn);return}
+    var data=await getRes.json(),rows=(data.values||[]).slice(1);
+    var localIdSet=new Set(memos.map(function(m){return String(m.id)}));
+    var localKeySet=new Set(memos.map(function(m){return m.text+'|'+fmtDate(m.createdAt)}));
+    var importCount=0,toImport=[];
+    for(var i=0;i<rows.length;i++){var r=rows[i];if(!r[1])continue;var sid=r[6]||null,text=r[1]||'',ds=r[0]||'';
+      if(sid&&localIdSet.has(sid))continue;if(!sid&&localKeySet.has(text+'|'+ds))continue;
+      var tags=r[2]?r[2].split(' ').filter(Boolean):[];var fav=r[3]==='★';var ct=r[5]?r[5].split(' | ').filter(Boolean):[];
+      toImport.push({id:sid?Number(sid):Date.now()+Math.random(),text:text,tags:tags,fav:fav,comments:ct.map(function(t){return{id:Date.now()+Math.random(),text:t}}),createdAt:new Date().toISOString()});importCount++}
+    if(toImport.length>0){memos=memos.concat(toImport).sort(function(a,b){return new Date(b.createdAt)-new Date(a.createdAt)});save();renderFeed();renderTagFilters()}
+    var values=[['日時','テキスト','タグ','ファボ','コメント数','コメント内容','ID']].concat(memos.map(function(m){return[fmtDate(m.createdAt),m.text,m.tags.join(' '),m.fav?'★':'',m.comments.length,m.comments.map(function(c){return c.text}).join(' | '),String(m.id)]}));
+    var putRes=await fetch('https://sheets.googleapis.com/v4/spreadsheets/'+id+'/values/'+encodeURIComponent(sheet+'!A1')+'?valueInputOption=RAW',{method:'PUT',headers:{'Content-Type':'application/json','Authorization':'Bearer '+gAccessToken},body:JSON.stringify({range:sheet+'!A1',majorDimension:'ROWS',values:values})});
+    if(!putRes.ok){var err2=await putRes.json();handleSheetsError(putRes.status,err2.error&&err2.error.message||'',btn);return}
+    btn.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> 同期済';
+    btn.classList.add('synced');
+    showToast(importCount>0?'✅ 同期完了（'+importCount+'件をSheetsから取り込みました）':'✅ '+memos.length+'件を同期しました','#34a853');
+  }catch(e){
+    btn.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets';
+    if(e.message==='Failed to fetch'){showErrorModal('ネットワークエラー','インターネット接続を確認してください。')}else{showErrorModal('予期しないエラー',e.message)}
   }
-
-  function closeEditModal() {
-    document.getElementById('editModal').classList.remove('open');
-  }
-
-  document.getElementById('editModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('editModal')) closeEditModal();
-  });
-
-  function addComment(id) {
-    const input = document.getElementById('ci_' + id);
-    const text = input.value.trim();
-    if (!text) return;
-    const m = memos.find(m => m.id === id);
-    if (m) {
-      m.comments.push({ id: Date.now(), text });
-      save();
-      renderFeed();
-      autoSync();
-    }
-  }
-
-  function openCommentDeleteModal(memoId, commentId) {
-    const m = memos.find(m => m.id === memoId);
-    const c = m?.comments.find(c => c.id === commentId);
-    if (!c) return;
-    const preview = c.text.length > 40 ? c.text.slice(0, 40) + '…' : c.text;
-    document.getElementById('commentDeletePreview').textContent = preview;
-    document.getElementById('commentDeleteOk').onclick = () => {
-      m.comments = m.comments.filter(c => c.id !== commentId);
-      save();
-      renderFeed();
-      closeCommentDeleteModal();
-      autoSync();
-    };
-    document.getElementById('commentDeleteModal').classList.add('open');
-  }
-
-  function closeCommentDeleteModal() {
-    document.getElementById('commentDeleteModal').classList.remove('open');
-  }
-
-  document.getElementById('commentDeleteModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('commentDeleteModal')) closeCommentDeleteModal();
-  });
-
-  function openCommentEditModal(memoId, commentId) {
-    const m = memos.find(m => m.id === memoId);
-    const c = m?.comments.find(c => c.id === commentId);
-    if (!c) return;
-    document.getElementById('commentEditText').value = c.text;
-    document.getElementById('commentEditOk').onclick = () => {
-      const newText = document.getElementById('commentEditText').value.trim();
-      if (!newText) { showToast('⚠️ テキストを入力してください'); return; }
-      c.text = newText;
-      save();
-      renderFeed();
-      closeCommentEditModal();
-      showToast('✅ コメントを更新しました', 'var(--success)');
-      autoSync();
-    };
-    document.getElementById('commentEditModal').classList.add('open');
-  }
-
-  function closeCommentEditModal() {
-    document.getElementById('commentEditModal').classList.remove('open');
-  }
-
-  document.getElementById('commentEditModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('commentEditModal')) closeCommentEditModal();
-  });
-
-  function setTagFilter(tag) {
-    activeTagFilter = activeTagFilter === tag ? null : tag;
-    renderFeed();
-    renderTagFilters();
-  }
-
-  function toggleFavOnly() {
-    favOnly = !favOnly;
-    document.getElementById('favOnlyBtn').classList.toggle('active', favOnly);
-    renderFeed();
-  }
-
-  function getAllTags() {
-    const set = new Set();
-    memos.forEach(m => m.tags.forEach(t => set.add(t)));
-    return [...set];
-  }
-
-  function renderTagFilters() {
-    const tags = getAllTags();
-    const row = document.getElementById('tagFilterRow');
-    if (tags.length === 0) { row.innerHTML = ''; return; }
-    row.innerHTML = tags.map(t =>
-      `<span class="tag ${activeTagFilter === t ? 'active-filter' : ''}" onclick="setTagFilter('${t}')">#${t}</span>`
-    ).join('');
-  }
-
-  function getFiltered() {
-    const q = document.getElementById('searchInput').value.trim().toLowerCase();
-    return memos.filter(m => {
-      if (favOnly && !m.fav) return false;
-      if (activeTagFilter && !m.tags.includes(activeTagFilter)) return false;
-      if (q && !m.text.toLowerCase().includes(q) && !m.tags.join(' ').toLowerCase().includes(q)) return false;
-      return true;
-    });
-  }
-
-  function fmtDate(iso) {
-    const d = new Date(iso);
-    const pad = n => String(n).padStart(2,'0');
-    return `${d.getFullYear()}/${pad(d.getMonth()+1)}/${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
-  }
-
-  function renderFeed() {
-    const filtered = getFiltered();
-    const feed = document.getElementById('feed');
-    const badge = document.getElementById('countBadge');
-    badge.textContent = filtered.length > 0 ? `${filtered.length} 件` : '';
-
-    if (filtered.length === 0) {
-      feed.innerHTML = `<div class="empty"><div class="empty-icon">📭</div>まだメモがありません<br>思いついたことをどんどん投稿してみましょう</div>`;
-      return;
-    }
-
-    feed.innerHTML = filtered.map(m => {
-      const tagsHtml = m.tags.length
-        ? `<div class="card-tags">${m.tags.map(t => `<span class="tag" onclick="setTagFilter('${t}')">#${t}</span>`).join('')}</div>`
-        : '';
-
-      const commentsHtml = m.comments.length
-        ? m.comments.map(c => `
-            <div class="comment-item">
-              <span>${escHtml(c.text)}</span>
-              <button onclick="openCommentEditModal(${m.id}, ${c.id})" title="編集">✏️</button>
-              <button onclick="openCommentDeleteModal(${m.id}, ${c.id})" title="削除">✕</button>
-            </div>`).join('')
-        : '';
-
-      const favIcon = m.fav
-        ? `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>`
-        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`;
-
-      return `
-        <div class="card" id="card_${m.id}">
-          <div class="card-text">${escHtml(m.text)}</div>
-          ${tagsHtml}
-          <div class="card-footer">
-            <span class="card-time">${fmtDate(m.createdAt)}</span>
-            <button class="btn-fav ${m.fav ? 'faved' : ''}" onclick="toggleFav(${m.id})" title="ファボ">
-              ${favIcon}${m.fav ? 'ファボ済' : 'ファボ'}
-            </button>
-            <button class="btn-delete" onclick="deleteMemo(${m.id})" title="削除">🗑</button>
-            <button class="btn-edit" onclick="openEditModal(${m.id})" title="編集">✏️</button>
-          </div>
-          <div class="comment-section" style="flex-direction:column;gap:8px;">
-            ${commentsHtml}
-            <div class="comment-input-row">
-              <input type="text" id="ci_${m.id}" placeholder="コメントを追加…" onkeydown="if(event.key==='Enter')addComment(${m.id})">
-              <button class="btn-comment-send" onclick="addComment(${m.id})">追加</button>
-            </div>
-          </div>
-        </div>`;
-    }).join('');
-  }
-
-  function escHtml(str) {
-    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  // ── Error modal ───────────────────────────────────
-  function showErrorModal(title, body) {
-    document.getElementById('errorModalTitle').textContent = title;
-    document.getElementById('errorModalBody').textContent = body;
-    document.getElementById('errorModal').classList.add('open');
-  }
-
-  function closeErrorModal() {
-    document.getElementById('errorModal').classList.remove('open');
-  }
-
-  document.getElementById('errorModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('errorModal')) closeErrorModal();
-  });
-
-  // ── Export menu ──────────────────────────────────
-  function toggleExportMenu() {
-    const dd = document.getElementById('exportDropdown');
-    dd.classList.toggle('open');
-  }
-
-  // Close export menu on outside click
-  document.addEventListener('click', e => {
-    const wrap = document.getElementById('exportWrap');
-    if (wrap && !wrap.contains(e.target)) {
-      document.getElementById('exportDropdown').classList.remove('open');
-    }
-  });
-
-  // ── Toast ─────────────────────────────────────────
-  function showToast(msg, color) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.style.borderColor = color || 'var(--border)';
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
-  }
-
-  // ── Download helper ───────────────────────────────
-  function download(content, filename, type) {
-    const bom = type.includes('csv') ? '\uFEFF' : '';
-    const blob = new Blob([bom + content], { type });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = filename; a.click();
-    URL.revokeObjectURL(url);
-  }
-
-  // ── CSV ───────────────────────────────────────────
-  function exportCSV() {
-    document.getElementById('exportDropdown').classList.remove('open');
-    const filtered = getFiltered();
-    if (filtered.length === 0) { showToast('出力するメモがありません'); return; }
-    const header = ['日時', 'テキスト', 'タグ', 'ファボ', 'コメント数'];
-    const rows = filtered.map(m => [
-      fmtDate(m.createdAt),
-      '"' + m.text.replace(/"/g, '""') + '"',
-      '"' + m.tags.join(' ') + '"',
-      m.fav ? '★' : '',
-      m.comments.length
-    ]);
-    const csv = [header, ...rows].map(r => r.join(',')).join('\n');
-    download(csv, `tana-oroshi_${today()}.csv`, 'text/csv;charset=utf-8;');
-    showToast('✅ CSV を出力しました', 'var(--success)');
-  }
-
-  // ── Markdown ──────────────────────────────────────
-  function exportMarkdown() {
-    document.getElementById('exportDropdown').classList.remove('open');
-    const filtered = getFiltered();
-    if (filtered.length === 0) { showToast('出力するメモがありません'); return; }
-    const lines = [`# 棚卸しノート\n_出力日: ${today()}_\n`];
-    filtered.forEach(m => {
-      lines.push(`## ${fmtDate(m.createdAt)}${m.fav ? ' ★' : ''}`);
-      if (m.tags.length) lines.push(m.tags.map(t => `\`#${t}\``).join(' '));
-      lines.push('');
-      lines.push(m.text);
-      if (m.comments.length) {
-        lines.push('');
-        m.comments.forEach(c => lines.push(`> ${c.text}`));
-      }
-      lines.push('\n---\n');
-    });
-    download(lines.join('\n'), `tana-oroshi_${today()}.md`, 'text/markdown;charset=utf-8;');
-    showToast('✅ Markdown を出力しました', 'var(--success)');
-  }
-
-  // ── 職務経歴書フォーマット ─────────────────────────
-  function exportResume() {
-    document.getElementById('exportDropdown').classList.remove('open');
-    const filtered = getFiltered();
-    if (filtered.length === 0) { showToast('出力するメモがありません'); return; }
-
-    // タグ別にグループ化
-    const groups = {};
-    const noTag = [];
-    filtered.forEach(m => {
-      if (m.tags.length === 0) { noTag.push(m); return; }
-      m.tags.forEach(t => {
-        if (!groups[t]) groups[t] = [];
-        groups[t].push(m);
-      });
-    });
-
-    const sep = '─'.repeat(40);
-    const lines = [
-      '【職務経歴書 素材メモ】',
-      `出力日：${today()}　　件数：${filtered.length}件（ファボ：${filtered.filter(m=>m.fav).length}件）`,
-      sep, ''
-    ];
-
-    // ファボ済み → 強みハイライト
-    const favs = filtered.filter(m => m.fav);
-    if (favs.length) {
-      lines.push('★ 強み・アピールポイント（ファボ済み）');
-      favs.forEach((m, i) => {
-        lines.push(`  ${i+1}. ${m.text.replace(/\n/g, ' ')}`);
-        if (m.comments.length) m.comments.forEach(c => lines.push(`     → ${c.text}`));
-      });
-      lines.push('', sep, '');
-    }
-
-    // タグ別セクション
-    Object.entries(groups).forEach(([tag, items]) => {
-      lines.push(`■ #${tag}（${items.length}件）`);
-      lines.push('');
-      items.forEach((m, i) => {
-        lines.push(`  ${i+1}. ${m.text.replace(/\n/g, '\n     ')}`);
-        if (m.comments.length) m.comments.forEach(c => lines.push(`     補足：${c.text}`));
-        lines.push('');
-      });
-      lines.push(sep, '');
-    });
-
-    // タグなし
-    if (noTag.length) {
-      lines.push(`■ 未分類（${noTag.length}件）`, '');
-      noTag.forEach((m, i) => {
-        lines.push(`  ${i+1}. ${m.text.replace(/\n/g, '\n     ')}`);
-        lines.push('');
-      });
-    }
-
-    download(lines.join('\n'), `resume-material_${today()}.txt`, 'text/plain;charset=utf-8;');
-    showToast('✅ 職務経歴書素材を出力しました', 'var(--success)');
-  }
-
-  function today() { return new Date().toISOString().slice(0,10); }
-
-  // ── 自動同期 ──────────────────────────────────────
-  async function autoSync() {
-    if (!gAccessToken) return;
-    const config = JSON.parse(localStorage.getItem('sheets_config') || '{}');
-    if (!config.id) return;
-
-    const sheet = config.sheet || '棚卸し';
-    const values = [
-      ['日時', 'テキスト', 'タグ', 'ファボ', 'コメント数', 'コメント内容', 'ID'],
-      ...memos.map(m => [
-        fmtDate(m.createdAt),
-        m.text,
-        m.tags.join(' '),
-        m.fav ? '★' : '',
-        m.comments.length,
-        m.comments.map(c => c.text).join(' | '),
-        String(m.id)
-      ])
-    ];
-
-    try {
-      const res = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${config.id}/values/${encodeURIComponent(sheet + '!A1')}?valueInputOption=RAW`,
-        {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + gAccessToken },
-          body: JSON.stringify({ range: `${sheet}!A1`, majorDimension: 'ROWS', values })
-        }
-      );
-      if (res.status === 401) {
-        gAccessToken = null;
-        silentTokenRefresh();
-      } else if (!res.ok) {
-        showToast('⚠️ 自動同期に失敗しました', 'var(--danger)');
-      }
-    } catch(e) {
-      // ネットワークエラーは無視
-    }
-  }
-
-  // サイレントなトークン再取得（ログアウトさせない）
-  function silentTokenRefresh() {
-    if (!tokenClient) return;
-    tokenClient.requestAccessToken({ prompt: '' });
-  }
-  const GOOG_CLIENT_ID = '652465897727-iol58291edt5drn7r3d1ah5k2atjk6u8.apps.googleusercontent.com';
-  const GOOG_SCOPE = 'https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/userinfo.profile';
-  let gAccessToken = null;
-  let tokenClient = null;
-
-  // Google Identity Services の初期化
-  window.addEventListener('load', () => {
-    if (typeof google === 'undefined') return;
-    tokenClient = google.accounts.oauth2.initTokenClient({
-      client_id: GOOG_CLIENT_ID,
-      scope: GOOG_SCOPE,
-      callback: async (resp) => {
-        if (resp.error) {
-          // prompt:'' でエラーなら初回サインインを促す
-          if (resp.error === 'interaction_required' || resp.error === 'login_required') {
-            tokenClient.requestAccessToken({ prompt: 'select_account' });
-          }
-          return;
-        }
-        gAccessToken = resp.access_token;
-        await fetchUserInfo();
-        openSheetsModal();
-      }
-    });
-    // 保存済みシート設定を復元
-    const saved = JSON.parse(localStorage.getItem('sheets_config') || '{}');
-    if (saved.id) document.getElementById('sheetsId').value = saved.id;
-    if (saved.sheet) document.getElementById('sheetsSheet').value = saved.sheet;
-  });
-
-  async function fetchUserInfo() {
-    const res = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-      headers: { Authorization: 'Bearer ' + gAccessToken }
-    });
-    const u = await res.json();
-    document.getElementById('authName').textContent = u.name || u.email;
-    if (u.picture) document.getElementById('authAvatar').src = u.picture;
-    document.getElementById('authBar').style.display = 'flex';
-  }
-
-  function signOut() {
-    gAccessToken = null;
-    document.getElementById('authBar').style.display = 'none';
-    const btn = document.getElementById('sheetsBtn');
-    btn.classList.remove('synced');
-    btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
-    showToast('サインアウトしました');
-  }
-
-  function openSheetsModal() {
-    // トークンがなければまずOAuth認証
-    if (!gAccessToken) {
-      if (tokenClient) tokenClient.requestAccessToken({ prompt: 'select_account' });
-      else showToast('⚠️ Googleサービスの読み込み中です。少し待ってから再試行してください。');
-      return;
-    }
-    const saved = JSON.parse(localStorage.getItem('sheets_config') || '{}');
-    if (saved.id) document.getElementById('sheetsId').value = saved.id;
-    if (saved.sheet) document.getElementById('sheetsSheet').value = saved.sheet;
-    document.getElementById('sheetsModal').classList.add('open');
-  }
-
-  function closeSheetsModal() {
-    document.getElementById('sheetsModal').classList.remove('open');
-  }
-
-  async function syncToSheets() {
-    const id = document.getElementById('sheetsId').value.trim();
-    const sheet = document.getElementById('sheetsSheet').value.trim() || '棚卸し';
-    if (!id) { showToast('⚠️ スプレッドシートIDを入力してください', 'var(--danger)'); return; }
-    if (!gAccessToken) { showToast('⚠️ 先にGoogleサインインしてください', 'var(--danger)'); return; }
-
-    localStorage.setItem('sheets_config', JSON.stringify({ id, sheet }));
-    closeSheetsModal();
-
-    const btn = document.getElementById('sheetsBtn');
-    btn.textContent = '同期中…';
-
-    try {
-      // ── STEP 1: Sheetsからデータを読み込む ──────────
-      const getRes = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(sheet + '!A:G')}`,
-        { headers: { 'Authorization': 'Bearer ' + gAccessToken } }
-      );
-
-      if (!getRes.ok) {
-        const err = await getRes.json();
-        handleSheetsError(getRes.status, err.error?.message || '', btn);
-        return;
-      }
-
-      const data = await getRes.json();
-      const rows = (data.values || []).slice(1); // ヘッダー行を除く
-
-      // ── STEP 2: SheetsにしかないメモをIDで照合して取り込む ──
-      // localStorageのIDセットを作る
-      const localIdSet = new Set(memos.map(m => String(m.id)));
-      const localKeySet = new Set(memos.map(m => m.text + '|' + fmtDate(m.createdAt)));
-
-      let importCount = 0;
-      const toImport = [];
-
-      for (const r of rows) {
-        if (!r[1]) continue; // テキストなし行はスキップ
-        const sheetId = r[6] || null;  // G列 = ID
-        const text    = r[1] || '';
-        const dateStr = r[0] || '';
-
-        if (sheetId && localIdSet.has(sheetId)) {
-          // IDが一致 → localStorageを優先（ファボ・コメントを保持）
-          continue;
-        }
-
-        if (!sheetId && localKeySet.has(text + '|' + dateStr)) {
-          // 古いデータ（IDなし）→ テキスト+日時で照合、重複スキップ
-          continue;
-        }
-
-        // localStorageにない → 新規として取り込む
-        const tags = r[2] ? r[2].split(' ').filter(Boolean) : [];
-        const fav  = r[3] === '★';
-        const commentTexts = r[5] ? r[5].split(' | ').filter(Boolean) : [];
-        toImport.push({
-          id: sheetId ? Number(sheetId) : Date.now() + Math.random(),
-          text,
-          tags,
-          fav,
-          comments: commentTexts.map(t => ({ id: Date.now() + Math.random(), text: t })),
-          createdAt: new Date().toISOString()
-        });
-        importCount++;
-      }
-
-      if (toImport.length > 0) {
-        memos = [...memos, ...toImport].sort((a, b) =>
-          new Date(b.createdAt) - new Date(a.createdAt)
-        );
-        save();
-        renderFeed();
-        renderTagFilters();
-      }
-
-      // ── STEP 3: 全件をSheetsに書き出す（G列にIDを追加）──
-      const values = [
-        ['日時', 'テキスト', 'タグ', 'ファボ', 'コメント数', 'コメント内容', 'ID'],
-        ...memos.map(m => [
-          fmtDate(m.createdAt),
-          m.text,
-          m.tags.join(' '),
-          m.fav ? '★' : '',
-          m.comments.length,
-          m.comments.map(c => c.text).join(' | '),
-          String(m.id)
-        ])
-      ];
-
-      const putRes = await fetch(
-        `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/${encodeURIComponent(sheet + '!A1')}?valueInputOption=RAW`,
-        {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + gAccessToken },
-          body: JSON.stringify({ range: `${sheet}!A1`, majorDimension: 'ROWS', values })
-        }
-      );
-
-      if (!putRes.ok) {
-        const err = await putRes.json();
-        handleSheetsError(putRes.status, err.error?.message || '', btn);
-        return;
-      }
-
-      btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> 同期済`;
-      btn.classList.add('synced');
-      const msg = importCount > 0
-        ? `✅ 同期完了（${importCount}件をSheetsから取り込みました）`
-        : `✅ ${memos.length}件を同期しました`;
-      showToast(msg, '#34a853');
-
-    } catch(e) {
-      btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
-      if (e.message === 'Failed to fetch') {
-        showErrorModal('ネットワークエラー', 'インターネット接続を確認してください。\nWi-Fiやモバイル通信がオンになっているか確認してから再試行してください。');
-      } else {
-        showErrorModal('予期しないエラー', e.message);
-      }
-    }
-  }
-
-  // エラーハンドリングを共通化
-  function handleSheetsError(code, msg, btn) {
-    if (code === 401) {
-      gAccessToken = null;
-      document.getElementById('authBar').style.display = 'none';
-      showErrorModal('認証が期限切れです', 'Sheetsボタンを押して、もう一度Googleサインインしてください。');
-    } else if (code === 403) {
-      showErrorModal('アクセス権限がありません', `Googleアカウント「${document.getElementById('authName').textContent}」にこのスプレッドシートの編集権限がありません。\n\nスプレッドシートの共有設定でこのアカウントに編集者権限を付与してください。`);
-    } else if (code === 404) {
-      showErrorModal('スプレッドシートが見つかりません', 'スプレッドシートIDが正しいか確認してください。\n\nURLの /d/【ここ】/edit の部分がIDです。');
-    } else if (msg.includes('Unable to parse range')) {
-      showErrorModal(`シート名が見つかりません`, `スプレッドシートを開いて、下のタブに表示されているシート名を確認してください。`);
-    } else {
-      showErrorModal('同期エラー', `エラーコード: ${code}\n${msg}`);
-    }
-    btn.innerHTML = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets`;
-  }
-
-  // Sheetsモーダル外クリックで閉じる
-  document.getElementById('sheetsModal').addEventListener('click', e => {
-    if (e.target === document.getElementById('sheetsModal')) closeSheetsModal();
-  });
-
-  document.getElementById('postText').addEventListener('keydown', e => {
-    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) postMemo();
-  });
-
-  renderFeed();
-  renderTagFilters();
+}
+
+function handleSheetsError(code,msg,btn){
+  if(code===401){gAccessToken=null;localStorage.removeItem('goog_access_token');localStorage.removeItem('goog_token_expiry');document.getElementById('authBar').style.display='none';showErrorModal('認証が期限切れです','Sheetsボタンを押して、もう一度Googleサインインしてください。')}
+  else if(code===403){showErrorModal('アクセス権限がありません','このスプレッドシートの編集権限がありません。\n共有設定で編集者権限を付与してください。')}
+  else if(code===404){showErrorModal('スプレッドシートが見つかりません','スプレッドシートIDが正しいか確認してください。')}
+  else if(msg.indexOf('Unable to parse range')!==-1){showErrorModal('シート名が見つかりません','スプレッドシートを開いて、下のタブに表示されているシート名を確認してください。')}
+  else{showErrorModal('同期エラー','エラーコード: '+code+'\n'+msg)}
+  btn.innerHTML='<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/></svg> Sheets';
+}
+
+document.getElementById('sheetsModal').addEventListener('click',function(e){if(e.target===document.getElementById('sheetsModal'))closeSheetsModal()});
+document.getElementById('postText').addEventListener('keydown',function(e){if(e.key==='Enter'&&(e.metaKey||e.ctrlKey))postMemo()});
+
+// ── Init ──
+var savedConfig=JSON.parse(localStorage.getItem('sheets_config')||'{}');
+if(savedConfig.id)document.getElementById('sheetsId').value=savedConfig.id;
+if(savedConfig.sheet)document.getElementById('sheetsSheet').value=savedConfig.sheet;
+if(gAccessToken){fetchUserInfo();var ru=localStorage.getItem('oauth_return_url');if(ru){localStorage.removeItem('oauth_return_url');setTimeout(function(){openSheetsModal()},300)}}
+renderFeed();renderTagFilters();
 </script>
 </body>
 </html>
